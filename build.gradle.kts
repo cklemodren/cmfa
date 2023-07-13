@@ -34,7 +34,7 @@ subprojects {
     extensions.configure<BaseExtension> {
         defaultConfig {
             if (isApp) {
-                applicationId = "com.github.metacubex.clash"
+                applicationId = "com.github.cklemodren.clash"
             }
 
             minSdk = 21
