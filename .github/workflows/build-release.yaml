@@ -58,7 +58,7 @@ jobs:
 
       - name: Set current tag
         id: current_tag
-        run: echo ::set-output name=tag::2.8.7
+        run: echo ::set-output name=tag::2.8.7.k.youku.com
 
       - name: Tag Repo
         uses: richardsimko/update-tag@v1
