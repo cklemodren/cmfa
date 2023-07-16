@@ -58,7 +58,7 @@ jobs:
 
       - name: Set current tag
         id: current_tag
-        run: echo ::set-output name=tag::2.8.8
+        run: echo ::set-output name=tag::$(git describe --tags --abbrev=0)
 
       - name: Tag Repo
         uses: richardsimko/update-tag@v1
@@ -76,3 +76,6 @@ jobs:
           tag_name: ${{ github.ref_name }}
           files: app/build/outputs/apk/meta/release/*
           generate_release_notes: true
+
+      - name: Release Changelog Builder
+        uses: mikepenz/release-changelog-builder-action@v3.6.0
